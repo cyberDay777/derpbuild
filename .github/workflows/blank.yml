@@ -16,7 +16,5 @@ jobs:
           wget https://raw.githubusercontent.com/akhilnarang/scripts/refs/heads/master/setup/android_build_env.sh
           chmod u+x android_build_env.sh
           ./android_build_env.sh
-          rm -r /home/servershit4/.repo
-          mkdir derp && cd derp
-          repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-lfs
-          repo sync -j20
+          git clone https://github.com/Fake-suns/local_manifests.git -b main .repo/local_manifests
+          repo sync --force-sync -j14 --current-branch --no-tags --no-clone-bundle --optimized-fetch --force-broken
